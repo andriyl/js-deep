@@ -50,6 +50,22 @@ flowchart TB
     Sandbox --> HostApp
 ```
 
+## Runtime (Logical Boundary)
+
+Runtime is a conceptual boundary combining Engine and Host.
+
+JS always runs inside a runtime environment.
+
+```mermaid
+flowchart TB
+    subgraph Runtime["JavaScript Runtime"]
+        direction TB
+        Engine["JS Engine (V8 / QuickJS / SpiderMonkey)"]
+        Host["Host Environment (Browser, Node.js, Electron, etc.)"]
+    end
+```
+
+
 ## References
 
 - **ECMAScript Specification (ECMA-262)**  
