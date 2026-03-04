@@ -48,3 +48,29 @@ flowchart TB
     JS_Engine --> API
     API --> Sandbox
     Sandbox --> HostApp
+```
+
+## References
+
+- **ECMAScript Specification (ECMA-262)**  
+  https://www.ecma-international.org/publications-and-standards/standards/ecma-262/
+
+- **V8 JavaScript Engine**  
+  https://v8.dev/
+
+- **QuickJS Engine**  
+  https://bellard.org/quickjs/
+
+- **Node.js Official Documentation**  
+  https://nodejs.org/
+
+- **MDN JavaScript Guide**  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+
+## Goals
+
+- Provide a clear mental model of **JavaScript as an embedded execution layer**
+- Distinguish responsibilities between **JavaScript, the JS Engine, and the Host**
+- Explain how **API bindings and native bridges** connect JS to host resources
+- Demonstrate simplified **embedding pseudocode examples**
+- Encourage deeper exploration of **engine internals and runtime architecture**
