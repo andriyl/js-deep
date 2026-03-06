@@ -27,25 +27,37 @@ JavaScript always runs inside a **host** (browser, Node.js, Electron, database).
 
 ```mermaid
 flowchart TB
+
     subgraph Layer_JS [JS Layer]
         direction TB
-        JS["JavaScript (user code, functions, libraries)"]
+        JS["JavaScript Code(user code, libraries)"]
     end
 
     subgraph Layer_Engine [Engine Layer]
         direction TB
-        JS_Engine["JS Engine (V8 / QuickJS / SpiderMonkey)"]
+        Realm["Realm(global object + built-ins)"]
+        Engine["JS Engine(V8 / QuickJS / SpiderMonkey)"]
+        Stack["Call Stack"]
     end
 
     subgraph Layer_Host [Host Layer]
         direction TB
-        API["API Bindings / Native Bridge"]
-        Sandbox["Sandbox / Security Layer"]
-        HostApp["Host Application\n(FS, HTTP, DOM, OS)"]
+        Hooks["Host Hooks(engine ↔ host boundary)"]
+        API["Host APIs(fetch, fs, timers, DOM)"]
+        Loop["Event Loop"]
+        Queue["Task / Microtask Queues"]
+        Sandbox["Security / Sandbox"]
+        HostApp["Host Application(browser / node / deno)"]
     end
 
-    JS --> JS_Engine
-    JS_Engine --> API
+    JS --> Realm
+    Realm --> Engine
+    Engine --> Stack
+    Stack --> Hooks
+    Hooks --> API
+    API --> Loop
+    Loop --> Queue
+    Queue --> Stack
     API --> Sandbox
     Sandbox --> HostApp
 ```
