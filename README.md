@@ -62,6 +62,23 @@ flowchart TB
     Sandbox --> HostApp
 ```
 
+## Realm
+
+A Realm is an isolated JavaScript environment that contains:
+
+- a global object
+- intrinsic objects (Array, Object, Promise, etc.)
+- execution contexts
+
+Each Realm has its own set of built-ins.
+
+Examples of separate realms:
+
+- Browser window
+- iframe
+- Web Worker
+- Node.js vm context
+
 ## Runtime (Logical Boundary)
 
 Runtime is a conceptual boundary combining Engine and Host.
