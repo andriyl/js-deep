@@ -97,10 +97,10 @@ flowchart TB
 
 ## References
 
-- **ECMAScript Specification (ECMA-262)**  
+- **ECMAScript Specification (ECMA-262)**    
   https://www.ecma-international.org/publications-and-standards/standards/ecma-262/
 
-- **JavaScript engines zoo**
+- **JavaScript engines zoo**    
   https://zoo.js.org/
 
 - **V8 JavaScript Engine**  
