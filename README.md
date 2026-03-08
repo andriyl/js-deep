@@ -100,6 +100,9 @@ flowchart TB
 - **ECMAScript Specification (ECMA-262)**  
   https://www.ecma-international.org/publications-and-standards/standards/ecma-262/
 
+- **JavaScript engines zoo**
+  https://zoo.js.org/
+
 - **V8 JavaScript Engine**  
   https://v8.dev/
 
